@@ -33,7 +33,7 @@ const Admindashboard = () => {
   const getData = async () => {
     try {
       const senddats = await axios.post(
-        "http://localhost:5000/admin/listorder",
+        import.meta.env.VITE_API_URL + "/admin/listorder",
       );
 
       if (senddats?.data?.success) {

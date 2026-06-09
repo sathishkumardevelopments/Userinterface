@@ -39,7 +39,7 @@ const Orderdetail = () => {
 
     try {
       const senddats = await axios.post(
-        "http://localhost:5000/admin/handleorder",
+        import.meta.env.VITE_API_URL+"/admin/handleorder",
         sendData,
       );
 

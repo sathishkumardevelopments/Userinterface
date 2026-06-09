@@ -28,7 +28,7 @@ const Login = () => {
       return;
     }
     try {
-      const senddats = await axios.post("http://localhost:5000/login", forminput);
+      const senddats = await axios.post(import.meta.env.VITE_API_URL+"/login", forminput);
       
       if (senddats?.data?.success) {
         

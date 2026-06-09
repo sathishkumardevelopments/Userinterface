@@ -62,7 +62,7 @@ const Billpopover = ({ data }) => {
         data: data,
       };
       const senddats = await axios.post(
-        "http://localhost:5000/users/placeorder",
+        import.meta.env.VITE_API_URL+"/users/placeorder",
         togive,
       );
 

@@ -71,8 +71,8 @@ const Productcreation = () => {
 
 
     const url = productToEdit
-      ? "http://localhost:5000/admin/handleproduct"
-      : "http://localhost:5000/admin/createproduct";
+      ? import.meta.env.VITE_API_URL+"/admin/handleproduct"
+      : import.meta.env.VITE_API_URL+"/admin/createproduct";
 
     try {
       const response = await axios.post(url, formData, {

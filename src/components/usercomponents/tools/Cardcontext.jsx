@@ -72,7 +72,7 @@ export const CartProvider = ({ children }) => {
     }
     console.log(srcc,"search----------")
     try{
-      const senddats = await axios.post("http://localhost:5000/users/fetchproducts", srcc);
+      const senddats = await axios.post(import.meta.env.VITE_API_URL+"/users/fetchproducts", srcc);
       if(senddats?.data?.success){
         setProduct(senddats?.data?.result)
       }else{
@@ -87,7 +87,7 @@ export const CartProvider = ({ children }) => {
   const getProducts = async (search) => {
     
     try{
-      const senddats = await axios.post("http://localhost:5000/users/fetchproducts");
+      const senddats = await axios.post(import.meta.env.VITE_API_URL+"/users/fetchproducts");
       if(senddats?.data?.success){
         setProduct(senddats?.data?.result)
       }else{

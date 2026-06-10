@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Addcartbtn from './Addcartbtn'
-import img from "@/assets/images/tv.jpg";
+import img from "@/assets/images/shirt.jpg";
 import { useCart } from "./Cardcontext";
 
 
